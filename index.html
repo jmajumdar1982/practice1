@@ -1,40 +1,152 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joydeep Majumdar's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Form Controls Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 30px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="checkbox"], input[type="radio"] {
+      width: auto;
+      margin-right: 8px;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Joydeep Majumdar's portfolio</h1>
-        <h2>I am a Web Developer</h2>
-        <hr>
-    </header>
 
-    <main>
-        <section>        
-            <nav>
-                <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
-                <img src="./assets/images/movie-ranking.png" alt="Movie Ranking Project" height="200">
-            </nav>
+  <h1 style="text-align:center;">HTML5 Form Controls Example</h1>
 
-            <nav>
-                <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a></h3>
-                <img src="./assets/images/birthday-invite.png" alt="Birthday Invite Project" height="200">
-            </nav>
-            <hr>
-        </section>
-    </main>
+  <form action="#" method="post">
 
-    <footer>
-        <h3>
-            <a href="./public/about.html">About Me</a>
-            <a href="./public/contact.html">Contact Me</a>
-        </h3>
-    </footer>
+    <!-- Text Inputs -->
+    <label for="name">Text Input:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email Input:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="password">Password Input:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+    <!-- Number and Range -->
+    <label for="age">Number Input:</label>
+    <input type="number" id="age" name="age" min="18" max="60">
+
+    <label for="volume">Range Input:</label>
+    <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+
+    <!-- Date and Time -->
+    <label for="dob">Date Input:</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="time">Time Input:</label>
+    <input type="time" id="time" name="time">
+
+    <label for="datetime">DateTime Local Input:</label>
+    <input type="datetime-local" id="datetime" name="datetime">
+
+    <label for="month">Month Input:</label>
+    <input type="month" id="month" name="month">
+
+    <label for="week">Week Input:</label>
+    <input type="week" id="week" name="week">
+
+    <!-- Radio Buttons -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male" style="display:inline;">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female" style="display:inline;">Female</label>
+
+    <!-- Checkboxes -->
+    <label>Hobbies:</label>
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading" style="display:inline;">Reading</label>
+    <input type="checkbox" id="traveling" name="hobby" value="traveling">
+    <label for="traveling" style="display:inline;">Traveling</label>
+    <input type="checkbox" id="music" name="hobby" value="music">
+    <label for="music" style="display:inline;">Music</label>
+
+    <!-- Dropdown -->
+    <label for="country">Select Input:</label>
+    <select id="country" name="country">
+      <option value="">--Select Country--</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+      <option value="japan">Japan</option>
+    </select>
+
+    <!-- Datalist -->
+    <label for="browser">Datalist Input:</label>
+    <input list="browsers" id="browser" name="browser" placeholder="Choose a browser">
+    <datalist id="browsers">
+      <option value="Chrome">
+      <option value="Firefox">
+      <option value="Edge">
+      <option value="Safari">
+      <option value="Opera">
+    </datalist>
+
+    <!-- File Upload -->
+    <label for="file">File Input:</label>
+    <input type="file" id="file" name="file">
+
+    <!-- Color Picker -->
+    <label for="color">Color Picker:</label>
+    <input type="color" id="color" name="color" value="#00aaff">
+
+    <!-- Textarea -->
+    <label for="message">Textarea:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+
+    <!-- URL -->
+    <label for="website">URL Input:</label>
+    <input type="url" id="website" name="website" placeholder="https://example.com">
+
+    <!-- Hidden Field -->
+    <input type="hidden" name="hiddenValue" value="12345">
+
+    <!-- Submit & Reset -->
+    <button type="submit">Submit Form</button>
+    <button type="reset">Reset Form</button>
+
+  </form>
 
 </body>
-</html> 
+</html>
